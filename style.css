@@ -23,7 +23,12 @@ body {
 
 .title-with-coverpic {
     color: white;
-    background-color: #2167ff;
+    background-image: url('3990025.jpg');
+    background-color: rgba(33, 103, 255, 0.9);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
     padding: 60px;
     margin-top: 10px;
     margin-left: -10px;
@@ -33,11 +38,18 @@ body {
     text-align: center;
 }
 
-.featured-items-title {
-    border: 1px solid black;
-    padding: 5px;
-    margin-top: 20px;
+.featured-items {
     margin-left: -10px;
     margin-right: -10px;
+}
+
+#featured-items-title {
+    padding: 5px;
+    margin-top: 20px;
     margin-bottom: -10px;
+}
+
+#featured-items-list {
+    padding: 100px;
+    border: 1px solid black;
 }
