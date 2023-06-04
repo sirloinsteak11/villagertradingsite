@@ -9,8 +9,6 @@
   </head>
 
   <body>
-    <script src="test.js"></script>
-
     <header>
       <nav class="navigation-bar">
         <a href="index.html">HOME</a>
@@ -19,32 +17,44 @@
         <a href="#">SUPPORT</a>
         <a href="#">ABOUT</a>
         <a href="test.html">test</a>
+        <a href="database.html">database</a>
       </nav>
       <div class="title-with-coverpic">
         <div class="title-text">
-          <h1 id="title">
-            Villager Trade Center
-          </h1>
+          <h1 id="title">Villager Trade Center</h1>
           <p>Your one stop shop for all the latest villager goods!</p>
         </div>
       </div>
     </header>
-    
+
     <div class="featured-items">
       <div id="featured-items-title">
         <h2>Form</h2>
       </div>
-  
+
       <div id="featured-items-list">
         <div id="villagerForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-            <label for="occupation">occupation:</label>
-            <input type="text", id="occupation" name="occupation" required><br>
-            <label for="personalityTag">describe yourself briefly:</label>
-            <input type="text" id="personalityTag" name="personality" placeholder="(this will be reviewed)" required><br>
-            <button id="submitForm" onclick="main()">Submit</button>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br />
+          <label for="occupation">occupation:</label>
+          <input
+            type="text"
+            ,
+            id="occupation"
+            name="occupation"
+            required
+          /><br />
+          <label for="personalityTag">describe yourself briefly:</label>
+          <input
+            type="text"
+            id="personalityTag"
+            name="personality"
+            placeholder="(this will be reviewed)"
+            required
+          /><br />
+          <button id="submitForm" onclick="main()">Submit</button>
         </div>
+        <p id="successMsg"></p>
       </div>
     </div>
   </body>
@@ -58,4 +68,5 @@
       <li><a href="#">About</a></li>
     </ul>
   </footer>
+  <script src="test.js"></script>
 </html>

@@ -12,25 +12,37 @@ function main() {
 
 function aThing(name, occ, personalityID) {
   const villProf = {
+    type: 'villager',
     name: name,
     occupation: occ,
     personalityID: personalityID,
   };
   console.log(villProf);
-  try {
-    fetch("http://127.0.0.1:8080/submit/", {
-      method: "POST",
-      body: JSON.stringify(villProf),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    }).then((response) => console.log(response));
-  } catch (e) {
-    throw e;
-  } finally {
-    const successBox = document.createElement('p');
-    const successMSG = document.createTextNode('Submit was Successful!');
-    successBox.appendChild(successMSG);
-    document.getElementById('featured-items-list').appendChild(successBox);
-  }
+
+  fetch("http://127.0.0.1:8080/submit/", {
+    method: "POST",
+    body: JSON.stringify(villProf),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => {
+      console.log(response);
+      document.getElementById('successMsg').innerHTML = 'Submit was Successful!';
+    })
+    .catch((e) => {
+      document.getElementById('successMsg').innerHTML = 'Submit was Unsuccessful!';
+      throw e;
+    });
+}
+
+function showEmployees() {
+  fetch("http://127.0.0.1:8080/getallemployees/", {
+    method: "GET"
+  })
+  .then((response) => {
+    console.log(response);
+    // console.log(`${reponse.type}, ${reponse.name}, ${response.occupation}, ${response.personalityID}`);
+  })
+  .catch((e) => console.log(e));
 }
