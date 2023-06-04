@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width" />
     <title>Villager Trades</title>
     <meta name="description" value="blahbalhblah" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="test.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <script src="script.js"></script>
+    <script src="test.js"></script>
 
     <header>
       <nav class="navigation-bar">
@@ -32,12 +32,18 @@
     
     <div class="featured-items">
       <div id="featured-items-title">
-        <h2>Featured Items</h2>
+        <h2>Form</h2>
       </div>
   
       <div id="featured-items-list">
-        <div class="featured-items-cells">
-
+        <div id="villagerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="occupation">occupation:</label>
+            <input type="text", id="occupation" name="occupation" required><br>
+            <label for="personalityTag">describe yourself briefly:</label>
+            <input type="text" id="personalityTag" name="personality" placeholder="(this will be reviewed)" required><br>
+            <button id="submitForm" onclick="main()">Submit</button>
         </div>
       </div>
     </div>
