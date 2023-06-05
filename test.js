@@ -41,9 +41,11 @@ function showEmployees() {
     method: "GET"
   })
   .then((response) => {
-    response.json();
+    return response.json();
     // console.log(`${reponse.type}, ${reponse.name}, ${response.occupation}, ${response.personalityID}`);
   })
-  .then((json) => console.log(json))
+  .then((json) => {
+    console.log(json);
+  })
   .catch((e) => console.log(e));
 }
